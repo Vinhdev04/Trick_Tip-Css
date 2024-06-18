@@ -1,0 +1,149 @@
+/* Day_01: Ôn tập về biến (Variable) */
+html {
+  font-size: 62.5%;
+}
+
+/* Khai báo biến */
+:root {
+  --text-color: red;
+  --font-size: 1.2rem;
+  --warning-color: #ffa400;
+  --success-color: #008000;
+}
+
+.title {
+  color: var(--text-color);
+}
+
+.desc {
+  /* Local Variable */
+  --text-color: var(--warning-color);
+  color: var(--text-color);
+  font-size: var(--font-size);
+}
+
+/* Luyện ví dụ */
+.danger-message {
+  width: 50rem;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  border-top: 4px solid var(--success-color);
+  padding: 4rem 2rem;
+  box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.danger-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  background-color: var(--success-color);
+  position: relative;
+  left: -10px;
+}
+
+.danger-icon i {
+  margin-right: 2rem;
+}
+
+.danger-close {
+  position: absolute;
+  font-size: 3rem;
+  right: 1%;
+  top: 16%;
+  transform: translate(-50%, -50%);
+  color: var(--success-color);
+  font-size: 3rem;
+}
+
+.danger-content {
+  margin-left: 2rem;
+}
+
+.danger-title {
+  text-transform: uppercase;
+  color: var(--success-color);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.danger-desc {
+  color: #ccc;
+}
+
+.danger-reconnect {
+  font-weight: bold;
+  color: #1a1c28;
+}
+
+/*  */
+.error-message {
+  width: 50rem;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  border-top: 4px solid var(--warning-color);
+  padding: 4rem 2rem;
+  box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.error-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  background-color: var(--warning-color);
+  position: relative;
+  left: -10px;
+}
+
+.error-icon i {
+  margin-right: 2rem;
+}
+
+.error-icon--close {
+  position: absolute;
+  font-size: 3rem;
+  right: 1%;
+  top: 16%;
+  transform: translate(-50%, -50%);
+  color: var(--warning-color);
+  font-size: 3rem;
+}
+
+.error-content {
+  margin-left: 2rem;
+}
+
+.error-title {
+  text-transform: uppercase;
+  color: var(--warning-color);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.error-desc {
+  color: #ccc;
+}
+
+.error-reconnect {
+  font-weight: bold;
+  color: #1a1c28;
+}
