@@ -1,0 +1,122 @@
+/* Căn giữa bằng Position: Absolute */
+.position,
+.position__second,
+.position__third,
+.position__four,
+.position__five {
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(
+    to right,
+    #eea2a2 0%,
+    #bbc1bf 19%,
+    #57c6e1 42%,
+    #b49fda 79%,
+    #7ac5d8 100%
+  );
+  position: relative;
+}
+
+.position__second {
+  margin-top: 100px;
+  border-top: 4px solid #eee;
+}
+
+/* --------------------- margin ------------------ */
+/* Cách 1: dùng margin(âm): -50% */
+.box {
+  --width-box: 200px;
+  --height-box: 200px;
+
+  width: var(--width-box);
+  height: var(--height-box);
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* BOX-CONTENT: 500X500
+     BOX-CHILDREN: 200x200 
+     top: 50%, left: 50% => 50% của 200 -> 50% của thẻ chứa nó => vẫn cảm giác bị lệch so với khối cha lớn
+     -> sử dụng margin(âm) với độ dài bằng 1/2 kích thước thẻ chứa nó */
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+/* --------------------- transform: translate(-50%, -50%) ------------------ */
+/* Cách 2: dùng transform: translate(-50%, -50%) */
+.box__second {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------- Sử dụng flex && flex + margin ------------------ */
+/* Cách 3: dùng display: flex  dùng cho thẻ cha*/
+.position__third {
+  display: flex;
+  /* cách 1 */
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.box__third {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+
+  /* cách 2 */
+  /* margin: auto auto; */
+
+  /* cách 3 */
+  /* align-self: center;
+  justify-self: center; */
+}
+
+/* Cách 4 : dùng display: flex + margin: auto auto*/
+.position__four {
+  display: flex;
+  margin-top: 100px;
+}
+
+.box__four {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  margin: auto auto;
+}
+
+/* --------------------- Sử dụng grid && grid + margin ------------------ */
+/* Cách 5: dùng display: grid */
+.position__five {
+  display: grid;
+  margin-top: 100px;
+  /* cách 1 */
+  place-items: center;
+
+  /* shorthand: place-items: center
+    justify-items: center;
+    align-items: center;
+  */
+}
+
+.box__five {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+
+  /* cách 2 */
+  margin: auto;
+
+  /* cách 3 
+  -> bỏ      
+    justify-items: center;
+    align-items: center; ở thẻ cha*/
+  justify-self: center;
+  align-self: center;
+}

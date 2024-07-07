@@ -1,0 +1,36 @@
+/* Day 02: Ôn tập Selectors và Combinators */
+
+/* Selector */
+h2 {
+  color: blue;
+  font-size: 1.2rem;
+}
+
+.title {
+  color: red;
+}
+
+.content {
+  color: darkviolet;
+}
+
+/* Combinators */
+/* Chọn  thẻ có .content nằm ngay sau .title  tác động */
+.title + .content {
+  color: yellow;
+}
+
+/* Chọn thẻ .content cùng cấp với .title tác dộng css */
+.title ~ .content {
+  color: red;
+}
+
+/* chọn tất cả thẻ li tác động css */
+.list__1 li {
+  color: darkorange;
+}
+
+/* Chọn thẻ li đầu tiên tác động css */
+.list__1 > li {
+  font-size: 1.4rem;
+}
