@@ -1,0 +1,42 @@
+/* Sự khác nhau giữa đơn vị "em" và "rem" */
+html {
+  /* font-size: 100%; */
+  font-size: 62.5%;
+}
+
+.box__first {
+  width: 10em;
+  height: 10em;
+  background-color: blue;
+  text-align: center;
+  line-height: 10em;
+  margin-bottom: 50px;
+
+  /* font-size: 20px => 1em = 20px */
+  font-size: 20px;
+}
+
+.box__second {
+  width: 10rem;
+  height: 10rem;
+  background-color: blueviolet;
+  text-align: center;
+  line-height: 10rem;
+  font-size: 20px;
+}
+
+/* 
+    mặc định font-size: 100%
+    => 1em = 1rem = 16px 
+*/
+
+/*      
+        font-size: 62.5%
+    =>  1em = 1rem = 10px
+ */
+
+/* 
+      điểm khác:
+  ->  đơn vị "em" phụ thuộc vào chính nó hoặc thẻ cha có thuộc tính font-size
+  -> đon vị "rem" chỉ phụ thuộc vào thẻ root,thẻ nguồn
+   */
