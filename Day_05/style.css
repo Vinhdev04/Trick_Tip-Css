@@ -1,0 +1,40 @@
+/* Sự khác nhau giữa đơn vị vw và phần trăm trong CSS */
+
+/* vw: viewport width */
+.box__first {
+  background-color: blueviolet;
+  height: 20rem;
+  /* width: 100vw; */
+  width: 50%;
+}
+
+/*  */
+.box__second {
+  background-color: bisque;
+  height: 20rem;
+  /* width: 100%; */
+  width: 50%;
+}
+
+.box__children1,
+.box__children2 {
+  background-color: aquamarine;
+  height: 5rem;
+}
+
+.box__children1 {
+  width: 100%;
+}
+
+.box__children2 {
+  width: 100vw;
+}
+
+/* Giống nhau:
+    + đều chiếm trọn 100%  chiều rộng khung nhìn
+    + 100% chiều rộng của phần tử cha gần nhất có position không phải static (thường là relative, absolute, hoặc fixed). Nó sẽ phụ thuộc vào kích thước của phần tử cha, và nếu không có phần tử cha có position không phải static, thì nó sẽ căn chỉnh theo chiều rộng 
+    của phần tử gốc (root element), thường là <html>.
+
+  - Khác nhau::
+    + vw -> lấy theo khung nhìn viewport width 
+    + %  -> lấy theo phần tử cha chứa nó*/
